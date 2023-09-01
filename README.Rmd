@@ -49,7 +49,7 @@ Should you use the data provided by the API, you must show attribution with a li
 
 ## Installation
 
-Install the development version from [GitHub](https://github.com/) by typing the following
+Install the development version from [GitHub](https://github.com/) by typing the following:
 
 ```{r, eval=FALSE, echo=TRUE}
 # Install devtools if needed
@@ -109,13 +109,13 @@ library(suntimes)
 # Get data
 df <- suntimes(lat = 50.065471, lon = -5.714856, date = "2023-08-31", timezone = "Europe/London")
 
-# Extract time only
+# Extract time only using {hms}
 hms::as_hms(df$results.solar_noon)
 ```
 
-Similarly, to plot using [{ggplot2}](https://ggplot2.tidyverse.org/)
+This can also be done *in-situ* in [{ggplot2}](https://ggplot2.tidyverse.org/):
 
-```{r example_06, eval=TRUE, echo=TRUE}
+```{r example_06, eval=TRUE, echo=TRUE, fig.width=5, fig.height=3}
 # Load package
 library(ggplot2)
 
@@ -127,7 +127,7 @@ date_seq <- seq(date_start, date_end, 14)
 # Get data
 df <- suntimes_multiple(lat = 50.065471, lon = -5.714856, dates = date_seq, timezone = "Europe/London")
 
-# Plot
+# Extract time *in-situ* using {hms} and plot
 ggplot(df, aes(x = date_seq, y = hms::as_hms(results.solar_noon))) +
   geom_line() +
   geom_point() +

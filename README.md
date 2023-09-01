@@ -47,7 +47,7 @@ with a link to <https://sunrise-sunset.org>.
 ## Installation
 
 Install the development version from [GitHub](https://github.com/) by
-typing the following
+typing the following:
 
 ``` r
 # Install devtools if needed
@@ -123,12 +123,13 @@ library(suntimes)
 # Get data
 df <- suntimes(lat = 50.065471, lon = -5.714856, date = "2023-08-31", timezone = "Europe/London")
 
-# Extract time only
+# Extract time only using {hms}
 hms::as_hms(df$results.solar_noon)
 #> 13:23:15
 ```
 
-Similarly, to plot using [{ggplot2}](https://ggplot2.tidyverse.org/)
+This can also be done *in-situ* in
+[{ggplot2}](https://ggplot2.tidyverse.org/):
 
 ``` r
 # Load package
@@ -142,7 +143,7 @@ date_seq <- seq(date_start, date_end, 14)
 # Get data
 df <- suntimes_multiple(lat = 50.065471, lon = -5.714856, dates = date_seq, timezone = "Europe/London")
 
-# Plot
+# Extract time *in-situ* using {hms} and plot
 ggplot(df, aes(x = date_seq, y = hms::as_hms(results.solar_noon))) +
   geom_line() +
   geom_point() +
