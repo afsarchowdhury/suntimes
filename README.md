@@ -72,7 +72,7 @@ suntimes(lat = 50.065471, lon = -5.714856, date = "2023-08-31", timezone = "Euro
 
 ## License
 
-`suntimes` is released on a [GPLv3
+`{suntimes}` is released on a [GPLv3
 license](https://www.gnu.org/licenses/gpl-3.0.en.html).
 
 ## Citation
