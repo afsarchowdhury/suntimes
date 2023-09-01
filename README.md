@@ -1,12 +1,12 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# `{suntimes}`
+# {suntimes}
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-`{suntimes}` is an `R` API wrapper for solar event times from
+{suntimes} is an `R` API wrapper for solar event times from
 [sunrise-sunset.org](https://sunrise-sunset.org).
 
 ## Usage limits and attribution
@@ -41,7 +41,7 @@ To return solar event times, the latitude and longitude of the location
 in question must be provided. These can be obtained from most mapping
 platforms, such as [latlong.net](https://www.latlong.net/).
 Alternatively, use
-[`{tidygeocoder}`](https://github.com/jessecambon/tidygeocoder/) to get
+[{tidygeocoder}](https://github.com/jessecambon/tidygeocoder/) to get
 these programmatically.
 
 The latitude and longitude for Land’s End is 50.065471 and -5.714856,
@@ -86,7 +86,7 @@ suntimes_multiple(
 
 ## License
 
-`{suntimes}` is released on a [GPLv3
+{suntimes} is released on a [GPLv3
 license](https://www.gnu.org/licenses/gpl-3.0.en.html).
 
 ## Citation
