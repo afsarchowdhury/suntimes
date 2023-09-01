@@ -15,7 +15,7 @@ suntimes_multiple(lat, lon, dates = NULL, timezone = NULL)
 date defaults to current date. Optional.}
 
 \item{timezone}{a character string containing a timezone to convert to.
-R must recognise the name contained in the string as a time zone on your
+R must recognise the name contained in the string as a timezone on your
 system. Use OlsonNames() for valid timezones. If not present,
 UTC is returned. Optional.}
 }
