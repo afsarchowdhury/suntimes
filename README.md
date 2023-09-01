@@ -6,8 +6,33 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
+## What is it?
+
 {suntimes} is an `R` API wrapper for solar event times from
-[sunrise-sunset.org](https://sunrise-sunset.org).
+[sunrise-sunset.org](https://sunrise-sunset.org). The returned variables
+are
+
+- sunrise
+- sunset
+- solar noon
+- day length
+- civil twilight start
+- civil twilight end
+- nautical twilight start
+- nautical twilight end
+- astronomical twilight start
+- astronomical twilight end
+
+## Why was it made?
+
+{suntimes} was made as a teaching aid to show students (i) how to
+interface with simple APIs, and (ii) how to author packages.
+
+In practice, it is better to compute solar event times internally in `R`
+rather than rely on an external API. Two recommended packages are
+
+- [{suncalc}](https://github.com/datastorm-open/suncalc)
+- [{oce}](https://github.com/dankelley/oce/)
 
 ## Usage limits and attribution
 
