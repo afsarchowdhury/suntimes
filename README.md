@@ -47,7 +47,7 @@ with a link to <https://sunrise-sunset.org>.
 ## Installation
 
 Install the development version from [GitHub](https://github.com/) by
-typing the following:
+typing the following
 
 ``` r
 # Install devtools if needed
@@ -108,6 +108,48 @@ suntimes_multiple(
   timezone = "Europe/London"
 )
 ```
+
+## Extracting time data
+
+The data returned by {suntimes} is in POSIXct by default. Sometimes,
+only the time data is needed. The
+[{hms}](https://hms.tidyverse.org/index.html) package can be used to
+extract the time.
+
+``` r
+# Load package
+library(suntimes)
+
+# Get data
+df <- suntimes(lat = 50.065471, lon = -5.714856, date = "2023-08-31", timezone = "Europe/London")
+
+# Extract time only
+hms::as_hms(df$results.solar_noon)
+#> 13:23:15
+```
+
+Similarly, to plot using [{ggplot2}](https://ggplot2.tidyverse.org/)
+
+``` r
+# Load package
+library(ggplot2)
+
+# Define sequence of dates
+date_start <- as.Date("2023-01-01")
+date_end <- as.Date("2023-12-31")
+date_seq <- seq(date_start, date_end, 14)
+
+# Get data
+df <- suntimes_multiple(lat = 50.065471, lon = -5.714856, dates = date_seq, timezone = "Europe/London")
+
+# Plot
+ggplot(df, aes(x = date_seq, y = hms::as_hms(results.solar_noon))) +
+  geom_line() +
+  geom_point() +
+  labs(x = "Date", y = "Solar noon")
+```
+
+<img src="man/figures/README-example_06-1.png" width="100%" />
 
 ## License
 
