@@ -57,7 +57,6 @@ If you supply a date, solar event times are returned for that date.
 Note: date must be supplied as a string in YYYY-MM-DD format.
 
 ``` r
-# Get times
 suntimes(lat = 50.065471, lon = -5.714856, date = "2023-08-31")
 ```
 
@@ -66,8 +65,20 @@ provide a timezone. Note: `R` must recognise the timezone on your
 system. Use `OlsonNames()` for valid timezones.
 
 ``` r
-# Get times
 suntimes(lat = 50.065471, lon = -5.714856, date = "2023-08-31", timezone = "Europe/London")
+```
+
+Solar event times for multiple dates can be obtained using the function
+`suntimes_multiple()`. Be mindful of the fair usage policy when using
+this function.
+
+``` r
+suntimes_multiple(
+  lat = 50.065471,
+  lon = -5.714856,
+  dates = c("2023-08-31", "2023-09-01"),
+  timezone = "Europe/London"
+)
 ```
 
 ## License
