@@ -1,0 +1,14 @@
+citHeader("To cite suntimes in publications use:")
+
+citEntry(
+  entry    = "manual",
+  title    = "suntimes",
+  author   = "Afsar Chowdhury",
+  year     = "2023",
+  url      = "https://github.com/afsarchowdhury/suntimes",
+  textVersion = paste("Chowdhury, A. (2023).",
+        "suntimes: Sunrise and sunset times.",
+        "version 0.1.0. Hyde High School. Tameside, Greater Manchester.",
+        "https://github.com/afsarchowdhury/suntimes"
+  )
+)
