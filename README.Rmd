@@ -12,7 +12,7 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
-# suntimes
+# `{suntimes}`
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -41,7 +41,7 @@ A [CRAN](https://cran.r-project.org/) version is unavailable at this time.
 
 ## Example
 
-To return solar event times, the latitude and longitude of the location in question must be provided.  These can be obtained from most mapping platforms, such as [latlong.net](https://www.latlong.net/).
+To return solar event times, the latitude and longitude of the location in question must be provided.  These can be obtained from most mapping platforms, such as [latlong.net](https://www.latlong.net/).  Alternatively, use [`{tidygeocoder}`](https://github.com/jessecambon/tidygeocoder/) to get these programmatically.
 
 The latitude and longitude for Land's End is 50.065471 and -5.714856, respectively.  Using these values with no given date, solar event times for the current day is returned.
 

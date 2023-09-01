@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# suntimes
+# `{suntimes}`
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -40,6 +40,9 @@ time.
 To return solar event times, the latitude and longitude of the location
 in question must be provided. These can be obtained from most mapping
 platforms, such as [latlong.net](https://www.latlong.net/).
+Alternatively, use
+[`{tidygeocoder}`](https://github.com/jessecambon/tidygeocoder/) to get
+these programmatically.
 
 The latitude and longitude for Land’s End is 50.065471 and -5.714856,
 respectively. Using these values with no given date, solar event times
