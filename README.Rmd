@@ -115,7 +115,7 @@ hms::as_hms(df$results.solar_noon)
 
 This can also be done *in-situ* in [{ggplot2}](https://ggplot2.tidyverse.org/):
 
-```{r example_06, eval=TRUE, echo=TRUE, fig.width=4, fig.height=2}
+```{r example_06, eval=FALSE, echo=TRUE}
 # Load package
 library(ggplot2)
 

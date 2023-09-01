@@ -150,8 +150,6 @@ ggplot(df, aes(x = date_seq, y = hms::as_hms(results.solar_noon))) +
   labs(x = "Date", y = "Solar noon")
 ```
 
-<img src="man/figures/README-example_06-1.png" width="100%" />
-
 ## License
 
 {suntimes} is released on a [GPLv3
