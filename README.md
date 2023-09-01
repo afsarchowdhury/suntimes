@@ -50,10 +50,10 @@ Install the development version from [GitHub](https://github.com/) by
 typing the following:
 
 ``` r
-# Install devtools if needed
+# Install {devtools} if needed
 #install.packages("devtools")
 
-# Install suntimes using devtools
+# Install {suntimes} using {devtools}
 devtools::install_github("afsarchowdhury/suntimes")
 ```
 
@@ -69,12 +69,13 @@ Alternatively, use
 [{tidygeocoder}](https://github.com/jessecambon/tidygeocoder/) to get
 these programmatically.
 
-The latitude and longitude for Land’s End is 50.065471 and -5.714856,
-respectively. Using these values with no given date, solar event times
-for the current day is returned.
+The latitude and longitude for [Land’s
+End](https://en.wikipedia.org/wiki/Land%27s_End) is 50.065471 and
+-5.714856, respectively. Using these values with no given date, solar
+event times for the current day is returned.
 
 ``` r
-# Load suntimes
+# Load package
 library(suntimes)
 
 # Get times
@@ -132,7 +133,8 @@ This can also be done *in-situ* in
 [{ggplot2}](https://ggplot2.tidyverse.org/):
 
 ``` r
-# Load package
+# Load packages
+library(suntimes)
 library(ggplot2)
 
 # Define sequence of dates
