@@ -2,10 +2,10 @@ Package: suntimes
 Type: Package
 Title: Sunrise and sunset times
 Version: 0.1.0
-Authors@R: person("Afsar", "Chowdhury", email = "a.chowdhury@hydehighschool.uk",
+Authors@R: person("Afsar", "Chowdhury", email = "afsarchowdhury@proton.me",
                   role = c("aut", "cre"))
-Maintainer: Afsar Chowdhury <a.chowdhury@hydehighschool.uk>
-Description: R API wrapper for sunrise-sunset.org.
+Maintainer: Afsar Chowdhury <afsarchowdhury@proton.me>
+Description: An R API wrapper for sunrise-sunset.org.
 License: GPL (>= 3)
 URL: https://github.com/afsarchowdhury/suntimes
 BugReports: https://github.com/afsarchowdhury/suntimes/issues

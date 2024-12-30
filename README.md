@@ -112,10 +112,9 @@ suntimes_multiple(
 
 ## Extracting time data
 
-The data returned by {suntimes} is in POSIXct by default. Sometimes,
-only the time data is needed. The
+The data returned by {suntimes} is in POSIXct by default. The
 [{hms}](https://hms.tidyverse.org/index.html) package can be used to
-extract the time.
+extract the time, if that is all you want.
 
 ``` r
 # Load package
@@ -127,29 +126,6 @@ df <- suntimes(lat = 50.065471, lon = -5.714856, date = "2023-08-31", timezone =
 # Extract time only using {hms}
 hms::as_hms(df$results.solar_noon)
 #> 13:23:15
-```
-
-This can also be done *in-situ* in
-[{ggplot2}](https://ggplot2.tidyverse.org/):
-
-``` r
-# Load packages
-library(suntimes)
-library(ggplot2)
-
-# Define sequence of dates
-date_start <- as.Date("2023-01-01")
-date_end <- as.Date("2023-12-31")
-date_seq <- seq(date_start, date_end, 14)
-
-# Get data
-df <- suntimes_multiple(lat = 50.065471, lon = -5.714856, dates = date_seq, timezone = "Europe/London")
-
-# Extract time *in-situ* using {hms} and plot
-ggplot(df, aes(x = date_seq, y = hms::as_hms(results.solar_noon))) +
-  geom_line() +
-  geom_point() +
-  labs(x = "Date", y = "Solar noon")
 ```
 
 ## License
@@ -164,8 +140,7 @@ citation("suntimes")
 #> To cite suntimes in publications use:
 #> 
 #>   Chowdhury, A. (2023). suntimes: Sunrise and sunset times. version
-#>   0.1.0. Hyde High School. Tameside, Greater Manchester.
-#>   https://github.com/afsarchowdhury/suntimes
+#>   0.1.0. https://github.com/afsarchowdhury/suntimes
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
